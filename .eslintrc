@@ -3,10 +3,6 @@
   "extends": "airbnb",
 
   rules: {
-    // console.log is important for development, so let's not
-    // throw errors for it.
-    "no-console":  0,
-    "no-debugger": 0,
   },
 
   // To configure global variables inside of a configuration file, use the

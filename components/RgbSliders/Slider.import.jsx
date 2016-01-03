@@ -1,7 +1,12 @@
 export default class Slider extends React.Component {
+  constructor() {
+    super();
+    // binding callbacks
+    this.onChange = this.onChange.bind(this);
+  }
+
   onChange(e) {
-    console.log(this.props);
-    this.props.onUpdate(e.target.value);
+    this.props.handleUpdate(e.target.value);
   }
 
   render() {
@@ -17,5 +22,5 @@ export default class Slider extends React.Component {
 }
 
 Slider.propTypes = {
-  onUpdate: React.PropTypes.function,
+  handleUpdate: React.PropTypes.func.isRequired,
 };

@@ -8,23 +8,26 @@ export default class RgbSliders extends React.Component {
       green: 0,
       blue: 0,
     };
+
+    // binding callbacks
+    this.handleUpdateRed = this.handleUpdateRed.bind(this);
+    this.handleUpdateGreen = this.handleUpdateGreen.bind(this);
+    this.handleUpdateBlue = this.handleUpdateBlue.bind(this);
   }
 
-  updateRed(val) {
-    console.log(val);
+  handleUpdateRed(val) {
     this.setState({
       red: val,
     });
-    console.log(this.state.red);
   }
 
-  updateGreen(val) {
+  handleUpdateGreen(val) {
     this.setState({
       green: val,
     });
   }
 
-  updateBlue(val) {
+  handleUpdateBlue(val) {
     this.setState({
       blue: val,
     });
@@ -34,13 +37,13 @@ export default class RgbSliders extends React.Component {
     return (
       <div>
         <p>Red</p>
-        <Slider onUpdate={this.updateRed} />{this.state.red}
+        <Slider handleUpdate={this.handleUpdateRed} />{this.state.red}
         <br />
         <p>Green</p>
-        <Slider onUpdate={this.updateGreen} />{this.state.green}
+        <Slider handleUpdate={this.handleUpdateGreen} />{this.state.green}
         <br />
         <p>Blue</p>
-        <Slider onUpdate={this.updateBlue} />{this.state.blue}
+        <Slider handleUpdate={this.handleUpdateBlue} />{this.state.blue}
       </div>
     );
   }
