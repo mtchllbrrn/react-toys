@@ -1,4 +1,6 @@
-class RgbSliders extends React.Component {
+import Slider from '/components/RgbSliders/Slider';
+
+export default class RgbSliders extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -43,22 +45,3 @@ class RgbSliders extends React.Component {
     );
   }
 }
-
-class Slider extends React.Component {
-  onChange(e) {
-    return e.target.value;
-  }
-
-  render() {
-    return (
-      <input
-        type="range"
-        min="0"
-        max="255"
-        onChange={this.onChange}
-      />
-    );
-  }
-}
-
-ReactLayout.render(RgbSliders);
