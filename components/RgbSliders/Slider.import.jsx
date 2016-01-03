@@ -15,3 +15,7 @@ export default class Slider extends React.Component {
     );
   }
 }
+
+Slider.propTypes = {
+  onUpdate: React.PropTypes.function,
+};
