@@ -15,6 +15,7 @@ export default class Slider extends React.Component {
         type="range"
         min="0"
         max="255"
+        defaultValue="0"
         onChange={this.onChange}
       />
     );
